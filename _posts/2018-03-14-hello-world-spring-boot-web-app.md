@@ -157,7 +157,7 @@ This will start the spring-boot web app in the default port 8080.
 
 Now access localhost:8080 in any browser of your choice and you should see a page like below:
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-11.png" width="500" height="200" alt="">
+  <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-11.png" width="500" height="200" alt="">
 <br><br>
 
 With this you have reached the first level of this exercise. Since you have copied the contents of build.gradle and
@@ -166,7 +166,7 @@ Application.java from the above blindly, let us try to understand what you did b
 - build.gradle :
 <br><br>
 ```js
-    buildscript {
+    buildscript { // <-- This is for the build process itself, for the tasks made available by build.gradle
         ext {
             springBootVersion = '2.0.0.RELEASE'  // <-- what version of spring boot to use
         }
@@ -188,8 +188,46 @@ Application.java from the above blindly, let us try to understand what you did b
             // <-- Jar that is needed in the classpath. Format - package:artifactId:versionName
             // For this excercise we need the above mentioned jar - 
         }
+    
+    // What are plugins for ?
+    //  Plugins add new tasks (e.g. JavaCompile), domain objects (e.g. SourceSet), 
+    //  conventions (e.g. Java source is located at src/main/java) 
+    //  as well as extending core objects and objects from other plugins
+     
+    apply plugin: 'java' //This plugins add capability to compile java code
+    
+    apply plugin: 'org.springframework.boot'  // The Spring Boot Gradle Plugin provides Spring Boot support in Gradle, 
+                                              // letting you package executable jar or war archives, run Spring Boot 
+                                              // applications, and use the dependency management provided by spring-boot-dependencies
+    
+    apply plugin: 'io.spring.dependency-management' //A Gradle plugin that provides Maven-like dependency management and 
+                                                    //exclusions.
+    
+    // Below information is what is used to build the fat jar of your app
+    group = 'io.github.bbop'
+    version = '0.0.1-SNAPSHOT'
+    
+    // Source language level
+    sourceCompatibility = 1.8
+    
+    // This exactly like the comment above but this for that jars that the app depends.
+    repositories {
+        mavenCentral()
+    }
+    
+    // What all jars are needed for compilation and running
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-web')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
     }
 ```
+
+Bonus : The global level dependencies and repositories sections list dependencies that required for building your source 
+        and running your source etc.
+        The buildscript is for the build.gradle file itself. So, this would contain dependencies for say creating RPMs,
+        Dockerfile, and any other dependencies for running the tasks in all the dependent build.gradle.
+        From [here](https://stackoverflow.com/questions/17773817/purpose-of-buildscript-block-in-gradle){:target="_blank"}
+              
 <br>
 Dependency management in Gradle/Maven:
 <br><br>
@@ -197,4 +235,3 @@ Dependency management in Gradle/Maven:
 <br><br>
     
 More detailed information on dependency management [here](https://docs.gradle.org/current/userguide/introduction_dependency_management.html){:target="_blank"}
-
