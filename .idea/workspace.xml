@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ee9a4e5-bca8-4b1b-9cd4-fe5eba02a201" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-03-14-hello-world-spring-boot-web-app.md" afterPath="$PROJECT_DIR$/_posts/2018-03-14-hello-world-spring-boot-web-app.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +37,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-03-14-hello-world-spring-boot-web-app.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-429">
-                <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+              <first_editor relative-caret-position="576">
+                <caret line="313" column="45" lean-forward="false" selection-start-line="313" selection-start-column="32" selection-end-line="313" selection-end-column="45" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -602,8 +601,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-03-14-hello-world-spring-boot-web-app.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-429">
-            <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+          <first_editor relative-caret-position="576">
+            <caret line="313" column="45" lean-forward="false" selection-start-line="313" selection-start-column="32" selection-end-line="313" selection-end-column="45" />
             <folding />
           </first_editor>
           <second_editor />
