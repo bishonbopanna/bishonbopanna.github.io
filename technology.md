@@ -4,7 +4,7 @@ title: Technology
 permalink: /technology/
 ---
 
-#### [1] [Hello World Spring-boot Web App](/technology/java/spring-boot/hello-world-spring-boot-web-app.html)
+#### [1] [Dissecting Hello World Spring-boot Web App](/technology/java/spring-boot/dissecting-hello-world-spring-boot-web-app.html)
 
 _____________________________________________________
 
