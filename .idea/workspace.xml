@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ee9a4e5-bca8-4b1b-9cd4-fe5eba02a201" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/images/technology/java/hello-world-web-app/hwwa-13.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-03-14-hello-world-spring-boot-web-app.md" afterPath="$PROJECT_DIR$/_posts/2018-03-14-dissecting-hello-world-spring-boot-web-app.md" />
-      <change beforePath="$PROJECT_DIR$/resources/images/technology/java/hello-world-web-app/hwwa-7.png" afterPath="$PROJECT_DIR$/resources/images/technology/java/hello-world-web-app/hwwa-7.png" />
-      <change beforePath="$PROJECT_DIR$/technology.md" afterPath="$PROJECT_DIR$/technology.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-14-dissecting-hello-world-spring-boot-web-app.md" afterPath="$PROJECT_DIR$/_posts/2018-03-14-dissecting-hello-world-spring-boot-web-app.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +37,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-03-14-dissecting-hello-world-spring-boot-web-app.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="681">
-                <caret line="400" column="111" lean-forward="false" selection-start-line="400" selection-start-column="111" selection-end-line="400" selection-end-column="111" />
+              <first_editor relative-caret-position="-339">
+                <caret line="332" column="5" lean-forward="false" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -606,8 +602,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-03-14-dissecting-hello-world-spring-boot-web-app.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="681">
-            <caret line="400" column="111" lean-forward="false" selection-start-line="400" selection-start-column="111" selection-end-line="400" selection-end-column="111" />
+          <first_editor relative-caret-position="-339">
+            <caret line="332" column="5" lean-forward="false" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
             <folding />
           </first_editor>
           <second_editor />

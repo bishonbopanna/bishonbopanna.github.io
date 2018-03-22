@@ -330,7 +330,7 @@ Since you have copied the contents of build.gradle and Application.java from the
      }
      ```
      
-Now that we understand the above let us move to the second stage of this exercise :
+#### Now that we understand the above let us move to the second stage of this exercise :
 
 7.  Add a "controllers" package under "io.github.bbop" and create HWAppController.java and add the below code to it. 
     Stop + Clean + Start (bootRun) your App.
@@ -401,5 +401,5 @@ Now that we understand the above let us move to the second stage of this exercis
   <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-13.png" width="450" height="100" alt="">
 <br><br>
    
-
+#### With this you have reached the second and last level of this exercise. Congratulations! Hope this was useful!!!
  
