@@ -4,6 +4,7 @@ title:  "Dissecting Hello World Spring-boot Web App (to an extent ;)"
 date:   2018-03-14
 categories: technology java spring-boot
 permalink: /:categories/:title
+comments: true
 ---
 
 This post is to understand what it takes to build a simple hello world spring-boot web app and then dissect it to understand it.
