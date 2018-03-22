@@ -331,7 +331,7 @@ is a great springio link we can refer to but approach it slightly differently
          ```
        
     <br><br>  
-    #### Now that we understand the above let us move to the second stage of this exercise :
+    #### Now that we understand the above let us move to the second stage of this exercise
 
 8.  Add a "controllers" package under "io.github.bbop" and create HWAppController.java and add the below code to it. 
     Stop + Clean + Start (bootRun) your App.
