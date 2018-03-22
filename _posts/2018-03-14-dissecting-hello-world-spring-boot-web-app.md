@@ -357,7 +357,7 @@ is a great springio link we can refer to but approach it slightly differently
     }
     ```
 
-8.  Access localhost:8080/dissect-hello-world in your browser. Do you get the return string from the above service ?
+9.  Access localhost:8080/dissect-hello-world in your browser. Do you get the return string from the above service ?
 
     Nope. You will still see the same Whitelable Error Page. What are we missing ?
        
@@ -367,37 +367,37 @@ is a great springio link we can refer to but approach it slightly differently
        
     Two options to fix this :
     
-    a.  In the Application.java which is the  class containing the main method, add @ComponentScan(basePackages = "io.github.bbop") right after
-                @SpringBootApplication annotation. This @ComponentScan with basePackages tells spring to scan all packages under io.github.bbop and associate
-                it to the servlet dispatcher. 
-                Servlet Dispatcher - is a listener that takes the incoming request and delegates it to the right method, in the right controller, using 
-                the path in the URI
+        a.  In the Application.java which is the  class containing the main method, add @ComponentScan(basePackages = "io.github.bbop") right after
+                    @SpringBootApplication annotation. This @ComponentScan with basePackages tells spring to scan all packages under io.github.bbop and associate
+                    it to the servlet dispatcher. 
+                    Servlet Dispatcher - is a listener that takes the incoming request and delegates it to the right method, in the right controller, using 
+                    the path in the URI
+                    
+        Application.java:
+        
+        ```js
+        package io.github.bbop.hwapp;
                 
-    Application.java:
-    
-    ```js
-    package io.github.bbop.hwapp;
-            
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-    import org.springframework.context.annotation.ComponentScan;
-    
-    @SpringBootApplication
-    @ComponentScan(basePackages = "io.github.bbop") // ADD THIS LINE
-    public class Application {
-    
-        public static void main(String[] args) {
-            SpringApplication.run(Application.class, args);
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        import org.springframework.context.annotation.ComponentScan;
+        
+        @SpringBootApplication
+        @ComponentScan(basePackages = "io.github.bbop") // ADD THIS LINE
+        public class Application {
+        
+            public static void main(String[] args) {
+                SpringApplication.run(Application.class, args);
+            }
         }
-    }
-    ```
-    
-    b.  Move the HWAppController into "io.github.bbop.hwapp" package and since the Application.java resides in the same package and since it has
-        @SpringBootApplication annotation which internally has @ComponentScan, the association to dispatcher servlet happens automatically
+        ```
+        
+        b.  Move the HWAppController into "io.github.bbop.hwapp" package and since the Application.java resides in the same package and since it has
+            @SpringBootApplication annotation which internally has @ComponentScan, the association to dispatcher servlet happens automatically
         
         
         
-9.  Stop + Clean + Start (bootRun) your App. Access localhost:8080/dissect-hello-world in your browser. You should see the below:
+10.  Stop + Clean + Start (bootRun) your App. Access localhost:8080/dissect-hello-world in your browser. You should see the below:
 <br><br>
   <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-13.png" width="450" height="100" alt="">
 <br><br>
