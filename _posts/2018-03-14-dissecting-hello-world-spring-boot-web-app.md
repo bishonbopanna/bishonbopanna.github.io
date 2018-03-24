@@ -411,6 +411,13 @@ is a great springio link we can refer to but approach it slightly differently
     b.  Move the HWAppController into "io.github.bbop.hwapp" package and since the Application.java resides in the same package and since it has
         @SpringBootApplication annotation which internally has @ComponentScan, the association to dispatcher servlet happens automatically
 
+    OR
+    <br><br>
+    c.  Recommended - Move the Application.java into "io.github.bbop" root package and since the Application.java resides in the root package 
+        and since it has @SpringBootApplication annotation which internally has @ComponentScan the component scan happens for all the packages 
+        under it, including "io.github.bbop.controllers" and the association to dispatcher servlet happens automatically. This is the recommended
+        way even by Spring.
+
     
         
 10.  Stop + Clean + Start (bootRun) your App. Access localhost:8080/dissect-hello-world in your browser. You should see the below:
