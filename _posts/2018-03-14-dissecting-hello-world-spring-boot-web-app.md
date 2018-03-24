@@ -9,9 +9,14 @@ comments: true
 
 This post is to understand what it takes to build a simple hello world spring-boot web app and then dissect it to understand it.
 
-#### Requirement : Build simple Hello World spring-boot web app
+_Recommended way to go about this post it to try it while you go through it and read the comments section in the code carefully to understand._ 
 
-#### Pre-requisites : 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
+#### Requirement : Build and understand a simple Hello World spring-boot web app
+
+#### Pre-requisites 
 -   Java 8 - Basic knowledge of Java programming language
 -   Intellij Editor (If you dont have one you can download the community version from [here](https://www.jetbrains.com/idea/download){:target="_blank"})
 -   Gradle (If you dont have gradle refer [here](https://gradle.org/install/){:target="_blank"}. On Mac I recommend to use "brew" to install gradle)
@@ -73,6 +78,8 @@ and when you build all the jars are downloaded from maven central repository/web
 <br>
         
 Now that we are better equipped about the requirement let us consider how we can achieve it.
+
+#### First level - Create an intellij project + populating build.gradle + Application.java + build and start empty spring-boot app.
 
 With the intent of not recreating the wheel - [Here](https://spring.io/guides/gs/spring-boot/){:target="_blank"} 
 is a great springio link we can refer to but approach it slightly differently
@@ -210,7 +217,7 @@ is a great springio link we can refer to but approach it slightly differently
       <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-11.png" style="max-width: 500px; max-height: 200px;" alt="">
     <br><br>
 
-    #### With this you have reached the first level of this exercise. 
+    With this you have reached the first level of this exercise. 
 
     Since you might have copied the contents of build.gradle and Application.java from the above blindly, let us try to understand what you did by copying these contents.
 
@@ -338,7 +345,9 @@ is a great springio link we can refer to but approach it slightly differently
          ```
        
     <br><br>  
-    #### Now that we understand the above let us move to the second stage of this exercise
+    #### Second level - And a controller to expose a get service to return a string
+    
+    Now that we understand the above let us move to the second lv of this exercise
 
 8.  Add a "controllers" package under "io.github.bbop" and create HWAppController.java and add the below code to it. 
     Stop + Clean + Start (bootRun) your App.
@@ -409,7 +418,7 @@ is a great springio link we can refer to but approach it slightly differently
   <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-13.png" style="max-width: 450px; max-height: 100px;" alt="">
 <br><br>
    
-#### With this you have reached the second and last level of this exercise. Congratulations! Hope this was useful!!!
+_With this you have reached the second and last level of this exercise. Congratulations! Hope this was useful!!!_
 
-Source code for this exercise is available [here](https://github.com/bishonbopanna/dissecting-hello-world-spring-boot-web-app){:target="_blank"}
+#### Source code for this exercise is available [here](https://github.com/bishonbopanna/dissecting-hello-world-spring-boot-web-app){:target="_blank"}
  
