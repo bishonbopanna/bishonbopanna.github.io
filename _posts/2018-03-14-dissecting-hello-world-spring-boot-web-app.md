@@ -15,6 +15,7 @@ This post is to understand what it takes to build a simple hello world spring-bo
 -   Java 8 - Basic knowledge of Java programming language
 -   Intellij Editor (If you dont have one you can download the community version from [here](https://www.jetbrains.com/idea/download){:target="_blank"})
 -   Gradle (If you dont have gradle refer [here](https://gradle.org/install/){:target="_blank"}. On Mac I recommend to use "brew" to install gradle)
+-   30 to 45 mins of your time.
 <br><br>
 
 __Note : I am building this on Mac, if you are on different platform then you might have to map the commands to your platform specific ones__
@@ -211,7 +212,7 @@ is a great springio link we can refer to but approach it slightly differently
 
     #### With this you have reached the first level of this exercise. 
 
-    Since you have copied the contents of build.gradle and Application.java from the above blindly, let us try to understand what you did by copying these contents.
+    Since you might have copied the contents of build.gradle and Application.java from the above blindly, let us try to understand what you did by copying these contents.
 
     - build.gradle :
         <br><br>
@@ -370,38 +371,38 @@ is a great springio link we can refer to but approach it slightly differently
        In the above step we created a package - "controllers" and added the HWAppController to this package. 
        Now with this spring-boot does not know that it has to associate the HWAppController to a dispatcher servlet that dispatches the service
        to your method.
-       
+           
     Two options to fix this :
     
-        a.  In the Application.java which is the  class containing the main method, add @ComponentScan(basePackages = "io.github.bbop") right after
-                    @SpringBootApplication annotation. This @ComponentScan with basePackages tells spring to scan all packages under io.github.bbop and associate
-                    it to the servlet dispatcher. 
-                    Servlet Dispatcher - is a listener that takes the incoming request and delegates it to the right method, in the right controller, using 
-                    the path in the URI
-                    
-        Application.java:
-        
-        ```js
-        package io.github.bbop.hwapp;
-                
-        import org.springframework.boot.SpringApplication;
-        import org.springframework.boot.autoconfigure.SpringBootApplication;
-        import org.springframework.context.annotation.ComponentScan;
-        
-        @SpringBootApplication
-        @ComponentScan(basePackages = "io.github.bbop") // ADD THIS LINE
-        public class Application {
-        
-            public static void main(String[] args) {
-                SpringApplication.run(Application.class, args);
-            }
+    a.  In the Application.java which is the  class containing the main method, add @ComponentScan(basePackages = "io.github.bbop") right after
+        @SpringBootApplication annotation. This @ComponentScan with basePackages tells spring to scan all packages under io.github.bbop and associate
+        it to the servlet dispatcher. 
+        Servlet Dispatcher - is a listener that takes the incoming request and delegates it to the right method, in the right controller, using 
+        the path in the URI.
+        <br>Application.java:
+    
+    ```js
+    package io.github.bbop.hwapp;
+            
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import org.springframework.context.annotation.ComponentScan;
+    
+    @SpringBootApplication
+    @ComponentScan(basePackages = "io.github.bbop") // ADD THIS LINE
+    public class Application {
+    
+        public static void main(String[] args) {
+            SpringApplication.run(Application.class, args);
         }
-        ```
-        
-        b.  Move the HWAppController into "io.github.bbop.hwapp" package and since the Application.java resides in the same package and since it has
-            @SpringBootApplication annotation which internally has @ComponentScan, the association to dispatcher servlet happens automatically
-        
-        
+    }
+    ```
+    OR
+    <br><br>
+    b.  Move the HWAppController into "io.github.bbop.hwapp" package and since the Application.java resides in the same package and since it has
+        @SpringBootApplication annotation which internally has @ComponentScan, the association to dispatcher servlet happens automatically
+
+    
         
 10.  Stop + Clean + Start (bootRun) your App. Access localhost:8080/dissect-hello-world in your browser. You should see the below:
 <br><br>
