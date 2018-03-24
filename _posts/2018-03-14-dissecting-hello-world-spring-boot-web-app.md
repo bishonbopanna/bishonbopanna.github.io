@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dissecting Hello World Spring-boot Web App (to an extent ;)"
+title:  "Dissecting Hello World Spring-boot Web App { to an extent ;) }"
 date:   2018-03-14
 categories: technology java spring-boot
 permalink: /:categories/:title
@@ -78,25 +78,25 @@ is a great springio link we can refer to but approach it slightly differently
 
 1.  Launch Intellij and create a project. Following screen shots should help :
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-1.png" width="450" height="400" alt="">
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-2.png" width="450" height="400" alt="">
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-3.png" width="450" height="400" alt="">
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-4.png" width="450" height="400" alt="">
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-5.png" width="450" height="400" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-1.png" style="max-width: 450px; max-height: 400px;" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-2.png" style="max-width: 450px; max-height: 400px;" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-3.png" style="max-width: 450px; max-height: 400px;" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-4.png" style="max-width: 450px; max-height: 400px;" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-5.png" style="max-width: 450px; max-height: 400px;" alt="">
 <br>
 
 2.  Create a package inside the src/main/java/ :
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-6.png" width="500" height="250" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-6.png" style="max-width: 500px; max-height: 250px;" alt="">
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-7.png" width="225" height="75" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-7.png" style="max-width: 225px; max-height: 75px;" alt="">
 <br>
 
-3.  Create an Application class inside the src/main/java/io.github.bbop :
+3.  Create an Application class inside the src/main/java/io.github.bbop.hwapp :
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-8.png" width="500" height="250" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-8.png" style="max-width: 500px; max-height: 250px;" alt="">
 <br><br>
-<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-9.png" width="225" height="75" alt="">
+<img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-9.png" style="max-width: 225px; max-height: 75px;" alt="">
 <br><br>
 
 4. Replace the build.gradle file's contents with the below
@@ -149,10 +149,15 @@ is a great springio link we can refer to but approach it slightly differently
     }
     ```
 
+    Note:   There is another alternative to get to this point if you choose to - https://start.spring.io/ is the spring initializer where you can
+    specify the group, artifact and dependencies and click on "Generate Project". This will download a zip file which can be unzipped and imported 
+    into your Intellij workspace to get to this point of the exercise.
+    
+    
 6.  Click on the _bootRun_ task from the _Gradle_ panel on the right hand side of Intellij.
     This will start the spring-boot web app in the default port 8080.
     <br><br>
-    <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-10.png" width="300" height="250" alt="">
+    <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-10.png" style="max-width: 300px; max-height: 250px;" alt="">
     <br><br>
     
     You should something like this in the console :
@@ -201,7 +206,7 @@ is a great springio link we can refer to but approach it slightly differently
 7.  Now access localhost:8080 in any browser of your choice and you should see a page like below. You are seeing this default message/page because
     we have still not added any service.
     <br><br>
-      <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-11.png" width="500" height="200" alt="">
+      <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-11.png" style="max-width: 500px; max-height: 200px;" alt="">
     <br><br>
 
     #### With this you have reached the first level of this exercise. 
@@ -277,7 +282,7 @@ is a great springio link we can refer to but approach it slightly differently
         Dependency management in Gradle/Maven:
         More detailed information on dependency management [here](https://docs.gradle.org/current/userguide/introduction_dependency_management.html){:target="_blank"}
         <br><br>
-            <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-12.png" width="400" height="300" alt="">
+            <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-12.png" style="max-width: 400px; max-height: 300px;" alt="">
         <br><br>
             
      - Application.java :
@@ -400,7 +405,7 @@ is a great springio link we can refer to but approach it slightly differently
         
 10.  Stop + Clean + Start (bootRun) your App. Access localhost:8080/dissect-hello-world in your browser. You should see the below:
 <br><br>
-  <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-13.png" width="450" height="100" alt="">
+  <img src="./../../../resources/images/technology/java/hello-world-web-app/hwwa-13.png" style="max-width: 450px; max-height: 100px;" alt="">
 <br><br>
    
 #### With this you have reached the second and last level of this exercise. Congratulations! Hope this was useful!!!
