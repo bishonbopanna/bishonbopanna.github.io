@@ -1,5 +1,7 @@
 ---
 layout: default
+title: 
+permalink: /
 ---
 
 ## Why create this space ?
